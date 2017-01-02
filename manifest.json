@@ -1,0 +1,16 @@
+{
+    "manifest_version":2,
+    "name":"Netlist",
+    "version":"0.0.0",
+
+    "description":"TODO",
+
+    "author":"Carmen y Mario",
+
+    "content_scripts": [
+        {
+          "matches": ["https://www.netflix.com/","https://www.netflix.com/browse","https://www.netflix.com/browse/my-list"],
+          "css": ["styles.css"]
+        }
+    ]
+}
