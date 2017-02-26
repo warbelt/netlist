@@ -10,7 +10,8 @@
     "content_scripts": [
         {
           "matches": ["https://www.netflix.com/","https://www.netflix.com/browse","https://www.netflix.com/browse/my-list"],
-          "css": ["styles.css"]
+          "css": ["styles.css"],
+          "js": ["scripts.js"]
         }
     ]
 }
