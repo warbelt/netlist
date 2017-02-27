@@ -8,10 +8,14 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		var xhttp = new XMLHttpRequest();
 		xhttp.onreadystatechange = function() {
 			if (this.readyState == 4 && this.status == 200) {
-		    	puntuaciones[this.numero] = myFunction(this);
-		    	x[this.numero].innerHTML += "<p>" + puntuaciones[this.numero] + "</p>";
-		    }
-		};
+				puntuaciones[this.numero] = myFunction(this);
+
+				var p = document.createElement("p");
+				p.innerHTML = puntuaciones[this.numero];
+				x[this.numero].appendChild(p);
+
+			}
+		}
 		xhttp.numero = i;
 		var url = "https://www.omdbapi.com/?t=" + titulos[i];
 		xhttp.open("GET", url, true);
