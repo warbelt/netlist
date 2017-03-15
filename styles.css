@@ -5,3 +5,11 @@
 .billboard-row{
     display: none;
 }
+
+.player-postplay-autoplay-still, .image-rotator-image{
+	filter: blur(15px);
+}
+
+.player-loading-background.player-visible {
+	filter: blur(30px);
+}
