@@ -1,4 +1,5 @@
-document.addEventListener("DOMContentLoaded", function(event) {
+//document.addEventListener("DOMContentLoaded", function(event) {
+if (document.readyState == "complete") {
 	var titulos = [];
 	var puntuaciones = [];
 	var x = document.getElementsByClassName("title_card");
@@ -10,10 +11,12 @@ document.addEventListener("DOMContentLoaded", function(event) {
 			if (this.readyState == 4 && this.status == 200) {
 				puntuaciones[this.numero] = myFunction(this);
 
-				var p = document.createElement("p");
-				p.innerHTML = puntuaciones[this.numero];
-				x[this.numero].appendChild(p);
-
+				if (!isNaN(puntuaciones[this.numero])){
+					var p = document.createElement("p");
+					p.classList.add("score");
+					p.innerHTML = puntuaciones[this.numero];
+					x[this.numero].appendChild(p);
+				}
 			}
 		}
 		xhttp.numero = i;
@@ -21,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		xhttp.open("GET", url, true);
 		xhttp.send();
 	}
-})
+}//)
 
 function myFunction(json) {
 	var jsonObj = JSON.parse(json.responseText);
