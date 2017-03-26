@@ -6,11 +6,6 @@
     display: none;
 }
 
-.score {
-	float: left;
-	margin: 0;
-}
-
 .player-postplay-autoplay-still, .image-rotator-image{
 	filter: blur(15px);
 }
@@ -19,6 +14,6 @@
 	filter: blur(30px);
 }
 
-.jawBonePane .synopsis, .player-postplay-episode-synopsis {
+.synopsis, .player-postplay-episode-synopsis {
 	filter: blur(5px);
 }
