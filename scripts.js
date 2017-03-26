@@ -33,7 +33,7 @@ if (document.readyState == "complete") {
 					if (elemento.childNodes.length>0 && elemento.getElementsByClassName("score").length<1)//comprueba que está abierto y no hay puntuación
 						myFunction2(titulo, elemento);
 				};
-			})(titulo, x[i].getElementsByTagName("span")[0]), false);
+			})(titulo, x[i].getElementsByTagName("span")[0]));
 		}
 	}
 }//)
@@ -53,8 +53,8 @@ function myFunction2(titulo, elemento) {
 			if (!isNaN(puntuacion)){
 				var p = document.createElement("p");
 				p.classList.add("score");
-				p.innerHTML = puntuacion;
-				elemento.getElementsByClassName("meta")[0].appendChild(p);
+				p.innerHTML = "IMDb: "+puntuacion;
+				elemento.getElementsByClassName("bob-overlay")[0].appendChild(p);
 			}
 		}
 	}

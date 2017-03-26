@@ -6,6 +6,12 @@
     display: none;
 }
 
+.score {
+	float: right;
+	margin-right: 1em;
+	font-weight: 700;
+}
+
 .player-postplay-autoplay-still, .image-rotator-image{
 	filter: blur(15px);
 }
